@@ -19,7 +19,7 @@ Feature: Manage Movies
     Given I am in the home page
     When I click on link "New Movie"
     And Put the title "Interestelar", description "It's all relative" and rating 5
-    And click on "Create Movie"
+    And click on "Enviar"
     Then I should see a message saying "Movie was successfully created!"
     And current path should be the path to the movies list with the new movie "Interestelar" added
 
@@ -28,6 +28,6 @@ Feature: Manage Movies
     When I go to the list of movies
     And click the link "Edit Movie"
     And I put the title "Edited Interestelar", description "Edited Description" and rating 5
-    And click on "Update Movie"
+    And click on "Enviar"
     Then I should see a message saying "Movie was successfully updated."
     And current path should be the path to the movies list with the movie edited

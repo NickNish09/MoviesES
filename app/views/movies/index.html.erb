@@ -1,8 +1,8 @@
 <p id="notice"><%= notice %></p>
-
-<h1>Movies</h1>
-
-<table>
+<div class="jumbotron">
+  <h1 align="center">Movies</h1>
+</div>
+<table class="table">
   <thead>
     <tr>
       <th>Title</th>
@@ -15,11 +15,11 @@
   <tbody>
     <% @movies.each do |movie| %>
       <tr>
-        <td><%= link_to movie.title, movie %></td>
-        <td><%= movie.description %></td>
-        <td><%= movie.rating %></td>
-        <td><%= link_to "Edit Movie", edit_movie_path(movie) %></td>
-        <td><%= link_to 'Destroy', movie, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to movie.title, movie,class: "btn" %></td>
+        <td><p style="font-size: 20px;" class="btn"><%= movie.description %></p></td>
+        <td><p style="font-size: 20px;" class="btn"><%= movie.rating %></p></td>
+        <td><%= link_to "Edit Movie", edit_movie_path(movie),class: "btn btn-primary",style: "color: white;" %></td>
+        <td><%= link_to 'Destroy', movie, method: :delete, data: { confirm: 'Are you sure?' },class: "btn btn-danger",style: "color: white;" %></td>
       </tr>
     <% end %>
   </tbody>
@@ -27,4 +27,4 @@
 
 <br>
 
-<%= link_to 'New Movie', new_movie_path %>
+<%= link_to 'New Movie', new_movie_path,class: "btn btn-success",style: "color: white ;" %>
