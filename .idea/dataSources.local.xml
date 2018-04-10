@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="Rails movies_es: test" uuid="dcfadc9a-a6fc-48ba-9e28-83a6973b6bec">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" />
+    </data-source>
+    <data-source name="Rails movies_es: development" uuid="f41aff77-32f8-41aa-90ac-0e6a3ea2bd4c">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" />
+      <first-sync>true</first-sync>
+      <user-name>nicholas</user-name>
+    </data-source>
+    <data-source name="Rails movies_es: production" uuid="cbed936b-216b-4aa2-a5a6-4ffbf6607192">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" />
+      <user-name>movies_es</user-name>
+    </data-source>
+    <data-source name="Rails movies_es: cucumber" uuid="182fa3d7-6210-4621-aced-cab56314fc2e">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" />
+    </data-source>
+  </component>
+</project>
