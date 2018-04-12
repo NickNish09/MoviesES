@@ -1,9 +1,11 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @movie.title %>
-</p>
+<div>
+  <p>
+    <strong>Title:</strong>
+    <%= @movie.title %>
+  </p>
+</div>
 
 <p>
   <strong>Description:</strong>
@@ -15,5 +17,5 @@
   <%= @movie.rating %>
 </p>
 
-<%= link_to 'Edit', edit_movie_path(@movie) %> |
-<%= link_to 'Back', movies_path %>
+<%= link_to 'Edit', edit_movie_path(@movie),class: "btn btn-primary",style: "color: white;" %> |
+<%= link_to 'Back', movies_path,class: "btn btn-warning",style: "color: white;" %>

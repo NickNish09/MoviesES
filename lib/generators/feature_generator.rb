@@ -5,14 +5,21 @@ class FeatureGenerator < Rails::Generators::NamedBase
   desc "This generator creates a .feature file in /features and the _steps.rb file in /features/step_definitions for a feature in cucumber based on the name of the feature"
   gem 'cucumber-rails', group: "test"
   def create_feature_file
-    template = "Feature: "
     if options['language'] == 'pt'
-      template = "Funcionalidade: "
+      template = "Funcionalidade: #{file_name}
+      Como [stakeholder]
+      Para que eu [funcionalidade]
+      Eu quero [finalidade]\n"
+    else
+      template = "Feature: #{file_name}
+      As a [stakeholder]
+      So that I [functionality]
+      I want to [goal]\n"
     end
     if options['folder']
-      create_file "features/#{options['folder']}/#{file_name}.feature", "#language: #{options['language']}\n#encoding: utf-8\n\n#{template}#{file_name}"
+      create_file "features/#{options['folder']}/#{file_name}.feature", "#language: #{options['language']}\n#encoding: utf-8\n\n#{template}"
     else
-      create_file "features/#{file_name}.feature", "#language: #{options['language']}\n#encoding: utf-8\n\n#{template}#{file_name}"
+      create_file "features/#{file_name}.feature", "#language: #{options['language']}\n#encoding: utf-8\n\n@#{file_name}\n#{template}"
     end
   end
 
