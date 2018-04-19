@@ -32,7 +32,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'bootstrap'
 gem 'jquery-rails'
 
-gem 'genainerator', '~> 0.2'
+gem 'genainerator'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
